@@ -1,0 +1,59 @@
+<h3 class="text-center mb-5">LIST</h3>
+
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary mb-5" ng-click="vm.getCinema();">
+            <i class="fa fa-list-ul"></i>
+            All
+        </button>
+        <button class="btn btn-info mb-5" ng-click="vm.getRecents();">
+            <i class="fa fa-clock"></i>
+            Recents
+        </button>
+        <button class="btn btn-warning mb-5" ng-click="vm.getBetters();">
+            <i class="fa fa-star"></i>
+            Betters
+        </button>
+    </div>
+    <div class="col">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search by name" ng-model="vm.query" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" ng-click="vm.findCinema();">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Qualification</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="ps in vm.cinema">
+            <td ng-bind="ps.name"></td>
+            <td>
+                <p ng-if="ps.qualification" ng-bind="ps.qualification"></p>
+                <div ng-if="!ps.qualification" class="input-group mb-3">
+                    <input type="number" placeholder="Qualification" aria-label="Username" aria-describedby="basic-addon1" ng-model="vm.qualification">
+                    <div class="input-group-prepend" ng-click="vm.setQualification(ps.id_cinema);">
+                        <span class="btn btn-success" id="basic-addon1">Set</span>
+                    </div>
+                </div>
+            </td>
+            <td ng-bind="ps.type"></td>
+            <td ng-bind="ps.category"></td>
+            <td>
+                <span class="btn btn-danger" ng-click="vm.deleteCinema(ps.id_cinema);">
+                    <i class="fa fa-trash"></i>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

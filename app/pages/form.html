@@ -1,0 +1,32 @@
+<h3 class="text-center mb-5">ADD ITEM</h3>
+
+
+<form>
+    <div class="row">
+        
+        <div class="form-group col-lg-6">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" ng-model="vm.item.name">
+        </div>
+
+        <div class="form-group col-lg-6">
+            <label for="type">Type</label>
+            <select class="form-control" ng-model="vm.item.type">
+                <option value="pelicula">Pelicula</option>
+                <option value="serie">Serie</option>
+            </select>
+        </div>
+
+        <div class="form-group col-lg-6">
+            <label for="type">Category</label>
+            <select class="form-control" ng-model="vm.item.category">
+                <option value="1">Accion</option>
+                <option value="2">Terror</option>
+            </select>
+        </div>
+
+        <div class="form-group col-lg-12">
+            <button type="button" ng-click="vm.addCinema();" class="btn btn-success">ADD </button>
+        </div>
+    </div>
+</form>

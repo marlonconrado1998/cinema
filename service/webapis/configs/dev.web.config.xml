@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appSettings>
+
+
+
+  <!--DataBase config-->
+
+  <setting>
+
+    <key>Host</key>
+
+    <value>localhost</value>
+
+  </setting>
+
+
+
+  <setting>
+
+    <key>DataBase</key>
+
+    <value>peliculas_series</value>
+
+  </setting>
+
+
+
+  <setting>
+
+    <key>User</key>
+
+    <value>root</value>
+
+  </setting>
+
+
+
+  <setting>
+
+    <key>Password</key>
+
+    <value></value>
+
+  </setting>
+
+</appSettings>
